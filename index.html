@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Configura a responsividade para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Edi Beauty Makeup - Maquiadora Profissional</title>
+    <!-- Descrição da página para SEO -->
+    <meta name="description" content="Edi Beauty Makeup - Influenciadora e Maquiadora profissional com mais de 600 mil seguidores. Ofereçe serviços de maquiagem, cursos e publicidade.">
+    <!-- Inclui o Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inclui o Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Inclui fontes do Google (Playfair Display e Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Inclui o arquivo CSS personalizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans bg-white text-gray-800">
+    <!-- Cabeçalho fixo no topo da página -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo da marca com cor definida no CSS -->
+            <a href="#" class="text-2xl font-bold logo">Edi<span class="logo">Beauty</span>Makeup</a>
+            
+            <!-- Navegação para desktop -->
+            <nav class="hidden lg:flex space-x-8">
+                <!-- Links de navegação com estilo e hover -->
+                <a href="#about" class="nav-link text-pink-600 hover:text-pink-700 font-bold">Quem Sou Eu</a>
+                <a href="#services" class="nav-link text-pink-600 hover:text-pink-700 font-bold">Serviços</a>
+                <a href="#partnerships" class="nav-link text-pink-600 hover:text-pink-700 font-bold">Parcerias</a>
+                <a href="#portfolio" class="nav-link text-pink-600 hover:text-pink-700 font-bold">Feedbacks</a>
+                <a href="#contact" class="nav-link text-pink-600 hover:text-pink-700 font-bold">Contato</a>
+                <a href="#redessociais" class="nav-link text-pink-600 hover:text-pink-700 font-bold">Redes Sociais</a>
+            </nav>
+            
+            <!-- Botão do menu mobile -->
+            <button id="mobile-menu-button" class="lg:hidden text-pink-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Menu mobile (inicialmente oculto) -->
+        <div id="mobile-menu" class="mobile-menu lg:hidden bg-white">
+            <div class="container mt-4 mx-auto px-4 py-2 flex flex-col space-y-3">
+                <!-- Links do menu mobile -->
+                <a href="#about" class="py-2 border-b border-gray-100 text-pink-600 hover:text-pink-700 font-bold">Quem Sou Eu</a>
+                <a href="#services" class="py-2 border-b border-gray-100 text-pink-600 hover:text-pink-700 font-bold">Serviços</a>
+                <a href="#partnerships" class="py-2 border-b border-gray-100 text-pink-600 hover:text-pink-700 font-bold">Parcerias</a>
+                <a href="#portfolio" class="py-2 border-b border-gray-100 text-pink-600 hover:text-pink-700 font-bold">Feedbacks</a>
+                <a href="#contact" class="py-2 border-b border-gray-100 text-pink-600 hover:text-pink-700 font-bold">Contato</a>
+                <a href="#redessociais" class="py-2 text-pink-600 hover:text-pink-700 font-bold">Redes Sociais</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Sobre -->
+    <section id="about" class="pt-32 py-16 bg-gradient-to-b from-pink-100 to-white">
+        <div class="container mx-auto px-4">
+            <!-- Título da seção -->
+            <h2 class="text-3xl font-bold text-center mb-12 font-playfair">Quem Sou Eu</h2>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <!-- Imagem de perfil -->
+                <div class="w-full md:w-1/3">
+                    <img src="image/quem_sou_eu.jpg" 
+                         alt="Edivânia Pereira - Edi Beauty Makeup" 
+                         class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                
+                <!-- Texto sobre -->
+                <div class="w-full md:w-2/3">
+                    <h3 class="text-2xl font-semibold mb-4 font-playfair">Edivânia Ribeiro</h3>
+                    <p class="text-gray-600 mb-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis vel tellus nec elementum. Suspendisse massa tellus, porttitor sed libero tincidunt, convallis blandit purus. Mauris vel ligula venenatis, finibus diam dignissim, viverra massa.
+                    </p>
+                    
+                    <!-- Botões de redes sociais -->
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/edibeautymakeup/" target="_blank" class="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-6 py-2 rounded-full transition duration-300 inline-flex items-center shadow-md">
+                            <i class="fab fa-instagram mr-2"></i> Instagram
+                        </a>
+                        <a href="https://www.tiktok.com/@edivaniapereira" target="_blank" class="bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-900 hover:to-black text-white px-6 py-2 rounded-full transition duration-300 inline-flex items-center shadow-md">
+                            <i class="fab fa-tiktok mr-2"></i> TikTok
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Título da seção -->
+            <h2 class="text-3xl font-bold text-center mb-12 font-playfair">Serviços Oferecidos</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cartão de serviço 1 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-lg animate-fadeIn" style="animation-delay: 0.1s;">
+                    <div class="text-pink-500 text-4xl mb-4">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 font-playfair">Serviço 01</h3>
+                    <p class="text-gray-600"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis vel tellus nec elementum. Suspendisse massa tellus, porttitor sed libero tincidunt, convallis blandit purus. Mauris vel ligula venenatis, finibus diam dignissim, viverra massa.</p>
+                </div>
+                
+                <!-- Cartão de serviço 2 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-lg animate-fadeIn" style="animation-delay: 0.2s;">
+                    <div class="text-pink-500 text-4xl mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 font-playfair">Serviço 02</h3>
+                    <p class="text-gray-600"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis vel tellus nec elementum. Suspendisse massa tellus, porttitor sed libero tincidunt, convallis blandit purus. Mauris vel ligula venenatis, finibus diam dignissim, viverra massa.</p>
+                </div>
+                
+                <!-- Cartão de serviço 3 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-lg animate-fadeIn" style="animation-delay: 0.3s;">
+                    <div class="text-pink-500 text-4xl mb-4">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 font-playfair">Serviço 03</h3>
+                    <p class="text-gray-600"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis vel tellus nec elementum. Suspendisse massa tellus, porttitor sed libero tincidunt, convallis blandit purus. Mauris vel ligula venenatis, finibus diam dignissim, viverra massa.</p>
+                </div>
+                
+                <!-- Cartão de serviço 4 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-lg animate-fadeIn" style="animation-delay: 0.4s;">
+                    <div class="text-pink-500 text-4xl mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 font-playfair">Serviço 04</h3>
+                    <p class="text-gray-600"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis vel tellus nec elementum. Suspendisse massa tellus, porttitor sed libero tincidunt, convallis blandit purus. Mauris vel ligula venenatis, finibus diam dignissim, viverra massa.</p>
+                </div>
+                
+                <!-- Cartão de serviço 5 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-lg animate-fadeIn" style="animation-delay: 0.5s;">
+                    <div class="text-pink-500 text-4xl mb-4">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 font-playfair">Serviço 05</h3>
+                    <p class="text-gray-600"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis vel tellus nec elementum. Suspendisse massa tellus, porttitor sed libero tincidunt, convallis blandit purus. Mauris vel ligula venenatis, finibus diam dignissim, viverra massa.</p>
+                </div>
+                
+                <!-- Cartão de serviço 6 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-lg animate-fadeIn" style="animation-delay: 0.6s;">
+                    <div class="text-pink-500 text-4xl mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 font-playfair">Serviço 06</h3>
+                    <p class="text-gray-600"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis vel tellus nec elementum. Suspendisse massa tellus, porttitor sed libero tincidunt, convallis blandit purus. Mauris vel ligula venenatis, finibus diam dignissim, viverra massa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Parcerias -->
+    <section id="partnerships" class="py-16 bg-gradient-to-b from-purple-100 to-white">
+        <div class="container mx-auto px-4">
+            <!-- Título da seção -->
+            <h2 class="text-3xl font-bold text-center mb-12 font-playfair">Divulgação Parcerias e Publicidade</h2>
+            
+            <!-- Card de métricas -->
+            <div class="flex flex-col md:flex-row items-center gap-8 mt-12 bg-white p-8 rounded-lg shadow-lg">
+                <div class="w-full md:w-1/2">
+                    <img src="image/quem_sou_eu.jpg" 
+                         alt="Publicidade Edi Beauty" 
+                         class="rounded-lg w-full h-auto">
+                </div>
+                
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-xl font-bold mb-4 font-playfair">Métricas</h3>
+                    <p class="text-gray-600 mb-6">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis vel tellus nec elementum. Suspendisse massa tellus, porttitor sed libero tincidunt, convallis blandit purus. Mauris vel ligula venenatis, finibus diam dignissim, viverra massa.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Galeria de marcas parceiras -->
+            <div class="mt-12 bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-800 mb-6 font-playfair">Algumas marcas que já fizeram publicidade comigo:</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <!-- Marca 1 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="image/shoppin_giga_mall.jpg" 
+                             alt="Shopping Giga Mall Messejana" 
+                             class="h-24 w-full object-contain transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <!-- Marca 2 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="image/academia_gavioes.jpg" 
+                             alt="Academia Gaviões 24 Horas" 
+                             class="h-24 w-full object-contain transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <!-- Marca 3 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="image/power_fit.jpg" 
+                             alt="Power Fit" 
+                             class="h-24 w-full object-contain transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <!-- Marca 4 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="image/exalla_cosmeticos.jpg" 
+                             alt="Exalla Cosméticos" 
+                             class="h-24 w-full object-contain transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <!-- Marca 5 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="image/corEton.jpg" 
+                             alt="CorEton" 
+                             class="h-24 w-full object-contain transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <!-- Marca 6 -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg">
+                        <img src="image/buq_care.jpg" 
+                             alt="Buq Care" 
+                             class="h-24 w-full object-contain transition-transform duration-300 hover:scale-105">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card de publicidade de alto impacto -->
+            <div class="flex flex-col md:flex-row items-center gap-8 mt-12 bg-white p-8 rounded-lg shadow-lg">
+                <div class="w-full md:w-1/2">
+                    <img src="image/publicidade.png" 
+                         alt="Publicidade Edi Beauty" 
+                         class="rounded-lg w-full h-auto">
+                </div>
+                
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4 font-playfair">Publicidade que fiz de alto impacto com mais de 18 milhões de visualizações alcançadas </h3>
+                    <p class="text-gray-600 mb-6">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis vel tellus nec elementum. Suspendisse massa tellus, porttitor sed libero tincidunt, convallis blandit purus. Mauris vel ligula venenatis, finibus diam dignissim, viverra massa.
+                    </p>
+                    <a href="https://www.tiktok.com/@edivaniapereira/video/7522224530211884344" 
+                       class="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-8 py-3 rounded-full font-semibold transition duration-300 inline-block shadow-md">
+                        Ver Publicidades
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Feedbacks -->
+    <section id="portfolio" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Título da seção -->
+            <h2 class="text-3xl font-bold text-center mb-12 font-playfair">Feedbacks de marcas que já fecharam publicidade comigo</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item do portfólio 1 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fEVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                         alt="Maquiagem de noiva" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                        <div class="text-white text-center">
+                            <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis vel tellus nec elementum. Suspendisse massa tellus, porttitor sed libero tincidunt, convallis blandit purus. Mauris vel ligula venenatis, finibus diam dignissim, viverra massa." - Marca 01</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item do portfólio 2 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fEVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                         alt="Maquiagem social" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                        <div class="text-white text-center">
+                            <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis vel tellus nec elementum. Suspendisse massa tellus, porttitor sed libero tincidunt, convallis blandit purus. Mauris vel ligula venenatis, finibus diam dignissim, viverra massa." - Marca 02</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item do portfólio 3 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fEVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Maquiagem artística" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                        <div class="text-white text-center">
+                            <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis vel tellus nec elementum. Suspendisse massa tellus, porttitor sed libero tincidunt, convallis blandit purus. Mauris vel ligula venenatis, finibus diam dignissim, viverra massa." - Marca 03</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item do portfólio 4 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fEVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                         alt="Maquiagem para pele madura" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                        <div class="text-white text-center">
+                            <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis vel tellus nec elementum. Suspendisse massa tellus, porttitor sed libero tincidunt, convallis blandit purus. Mauris vel ligula venenatis, finibus diam dignissim, viverra massa." - Marca 04</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item do portfólio 5 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fEVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" 
+                         alt="Maquiagem profissional" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                        <div class="text-white text-center">
+                            <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis vel tellus nec elementum. Suspendisse massa tellus, porttitor sed libero tincidunt, convallis blandit purus. Mauris vel ligula venenatis, finibus diam dignissim, viverra massa." - Marca 05</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item do portfólio 6 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fEVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                         alt="Auto maquiagem" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
+                        <div class="text-white text-center">
+                            <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis vel tellus nec elementum. Suspendisse massa tellus, porttitor sed libero tincidunt, convallis blandit purus. Mauris vel ligula venenatis, finibus diam dignissim, viverra massa." - Marca 06</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Redes Sociais -->
+    <section id="redessociais" class="py-16 bg-gradient-to-b from-purple-100 to-white">
+        <div class="container mx-auto px-4 text-center">
+            <!-- Título da seção -->
+            <h2 class="text-3xl font-bold mb-12 font-playfair">Redes Sociais</h2>
+            <!-- Ícones de redes sociais -->
+            <div class="flex justify-center space-x-8 mb-8">
+                <a href="https://www.instagram.com/edibeautymakeup/" target="_blank" class="text-pink-500 hover:text-pink-600 text-4xl transition duration-300 transform hover:scale-110">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@edivaniapereira" target="_blank" class="text-gray-800 hover:text-gray-900 text-4xl transition duration-300 transform hover:scale-110">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            <p class="text-xl max-w-2xl mx-auto"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis vel tellus nec elementum. Suspendisse massa tellus, porttitor sed libero tincidunt, convallis blandit purus. Mauris vel ligula venenatis, finibus diam dignissim, viverra massa.</p>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <!-- Título da seção -->
+            <h2 class="text-3xl font-bold mb-12 font-playfair">Entre em Contato</h2>
+            
+            <div class="max-w-2xl mx-auto">
+                <!-- Informações de contato -->
+                <div class="bg-gradient-to-r from-pink-100 to-white p-6 rounded-lg shadow-lg">
+                    
+                    <div class="space-y-4">
+                        <!-- Assessoria -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-pink-500 mb-2 assessoria">Assessoria</h3>
+                            <p class="text-lg text-gray-600 mb-2 font-bold">Para parcerias, publicidades e divulgações:</p>
+                            <a href="http://api.whatsapp.com/send?1=ptBR&phone=5585997304019" 
+                               class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-2 rounded-full transition duration-300 inline-flex items-center shadow-md text-lg">
+                                <i class="fab fa-whatsapp mr-2"></i> WhatsApp Assessoria
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gradient-to-r from-pink-100 to-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+            </div>
+            
+            <!-- Copyright com estilo igual ao da Assessoria -->
+            <div class="mt-8 pt-6 text-center copyright">
+                <p>© 2023 Edi Beauty Makeup. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão de voltar ao topo -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Inclui o arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
