@@ -1,0 +1,216 @@
+/* styles.css */
+
+/* Define variáveis de cores para consistência */
+:root {
+    --primary-color: #ec4899; /* Rosa principal */
+    --text-color: #1f2937; /* Cinza escuro para texto */
+}
+
+/* Define fontes padrão e estrutura do body */
+body {
+    font-family: 'Lora', serif;
+    scroll-padding-top: 80px; /* Ajusta rolagem para header fixo */
+    min-height: 100vh; /* Garante altura mínima para rodapé */
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Evita barras horizontais indesejadas no parallax */
+}
+
+/* Define fonte Playfair Display para títulos */
+.font-playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Estilo base para a seção hero com efeito parallax */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-attachment: fixed; /* Fixa a imagem para o efeito parallax */
+    background-position: center 5%; /* Ajustado para focar o rosto em mobile */
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0; /* Garante que o conteúdo fique atrás do overlay */
+}
+
+/* Overlay escuro na seção hero para melhorar legibilidade */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay semi-transparente */
+    z-index: 1;
+}
+
+/* Conteúdo da hero ajustado para subir um pouco */
+.hero-content {
+    position: relative;
+    z-index: 10; /* Garante que o conteúdo fique à frente */
+    width: 100%;
+    padding: 2rem 2rem 2rem; /* Padrão para desktop e tablet */
+}
+
+/* Estilo para o menu mobile */
+.mobile-menu {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Exibe menu mobile quando não está escondido */
+.mobile-menu:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilo para animações de fade-in */
+.animate-fadeIn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.animate-fadeIn.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Desativa animações para usuários com preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    .animate-fadeIn {
+        transition: none;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .hero-section {
+        background-attachment: scroll; /* Desativa parallax em modo reduzido */
+    }
+}
+
+/* Estilo para o header centralizado */
+header .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header nav {
+    margin-bottom: 1rem; /* Espaçamento entre menu e botão em desktop */
+}
+
+header .nav-link {
+    white-space: nowrap; /* Garante que texto não quebre em várias linhas */
+    padding: 0 1rem; /* Espaçamento interno para melhor aparência */
+}
+
+/* Ajuste para desktop (lg e acima) */
+@media (min-width: 1024px) {
+    header .container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    header nav {
+        margin-bottom: 0; /* Remove margem em desktop */
+    }
+
+    header .nav-link {
+        padding: 0 1.5rem; /* Aumenta espaçamento em desktop */
+    }
+
+    header .nav-link.bg-pink-500 {
+        margin-left: 2rem; /* Espaçamento entre menu e botão "Download" */
+    }
+}
+
+/* Ajuste para o texto do botão "Download Mídia Kit" */
+.nav-link.bg-pink-500 span:first-child {
+    font-size: 1rem; /* Tamanho base para "Download" */
+}
+
+.nav-link.bg-pink-500 span:last-child {
+    font-size: 0.9rem; /* Aumentado de 0.75rem para melhor legibilidade em PC e tablet */
+    margin-top: 0.125rem; /* Mantém o espaçamento vertical reduzido */
+}
+
+/* Estilo para botões de foco (acessibilidade) */
+.nav-link:focus, #mobile-menu-button:focus, #backToTop:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Estilo para o rodapé */
+footer {
+    margin-top: auto; /* Empurra rodapé para o final da página */
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+/* Garante que o conteúdo principal não seja oculto pelo header fixo */
+main {
+    flex: 1 0 auto;
+}
+
+/* Ajustes para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-section {
+        min-height: 500px; /* Altura mínima para tablets */
+    }
+    #services .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+    }
+    footer .flex {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav-link.bg-pink-500 span:last-child {
+        font-size: 0.9rem; /* Ajustado para tablets */
+    }
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 767px) {
+    .hero-section {
+        min-height: 400px; /* Altura mínima em mobile */
+    }
+    .hero-section h1 {
+        font-size: 2rem; /* Reduz tamanho do texto em mobile */
+    }
+    .hero-section .container {
+        padding-top: 80px; /* Ajusta padding para header fixo */
+    }
+    #services .grid {
+        grid-template-columns: 1fr; /* 1 coluna em mobile */
+    }
+    footer {
+        padding: 2rem 0; /* Ajusta padding do rodapé */
+    }
+    footer .flex {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 2rem; /* Mantém espaço suficiente */
+    }
+    footer .flex div {
+        margin-top: 1rem;
+    }
+    header {
+        padding: 1rem 0; /* Reduz padding do header em mobile */
+    }
+    .service-card {
+        margin-bottom: 1rem; /* Espaçamento entre cards em mobile */
+    }
+    .nav-link.bg-pink-500 span:first-child {
+        font-size: 0.9rem; /* Ajusta tamanho em mobile */
+    }
+    .nav-link.bg-pink-500 span:last-child {
+        font-size: 0.7rem; /* Mantém menor em mobile */
+        margin-top: 0.1rem; /* Ajusta espaçamento em mobile */
+    }
+    .hero-content {
+        padding: 1rem 2rem 2rem; /* Reduzido de 2rem para 1rem no padding-top para mobile */
+    }
+}
